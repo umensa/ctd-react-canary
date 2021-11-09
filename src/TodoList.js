@@ -18,7 +18,7 @@ const todoList = [
 const TodoList = (props) => (
   <ul>
     {todoList.map((list) => (
-      <TodoListItem key={list.id} todo={list} />
+      <TodoListItem key={list.id} todo={list.title} />
     ))}
   </ul>
 );    
