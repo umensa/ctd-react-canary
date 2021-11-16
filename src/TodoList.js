@@ -7,6 +7,6 @@ const TodoList = ({todoList}) => (
       <TodoListItem key={list.id} todo={list.title} />
     ))}
   </ul>
-);    
+);
 
 export default TodoList;
