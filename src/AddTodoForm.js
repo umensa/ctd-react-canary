@@ -11,7 +11,10 @@ const AddTodoForm = function(props) {
   const handleAddTodo = (event) => {
     event.preventDefault();
     setTodoTitle('');
-    props.onAddTodo(todoTitle);
+    props.onAddTodo({
+      title: todoTitle,
+      id: Date.now()
+    });
   };
 
   return (
@@ -27,6 +30,6 @@ const AddTodoForm = function(props) {
       <button type="submit">Add</button>
     </form>
   );
-}
+};
 
 export default AddTodoForm;
