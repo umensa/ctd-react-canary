@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import TodoList from './TodoList';
-import AddTodoForm from './AddTodoForm';
+import React, { useState, useEffect } from 'react'
+import TodoList from './TodoList'
+import AddTodoForm from './AddTodoForm'
 
 const useSemiPersistentState = function() {
   const [todoList, setTodoList] = useState(
@@ -22,18 +22,18 @@ const App = function() {
 
   const addTodo = (newTodo) => (
     setTodoList([...todoList, newTodo])
-  );
+  )
 
   return (
-    <div>
+    <>
       <h1>Todo List</h1>
       
       <AddTodoForm onAddTodo={addTodo} />
       <hr />
 
       <TodoList todoList={todoList} />
-    </div>
-  );
-};
+    </>
+  )
+}
 
-export default App;
+export default App
