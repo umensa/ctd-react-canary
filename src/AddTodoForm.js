@@ -20,7 +20,9 @@ const AddTodoForm = function({onAddTodo}) {
 
   return (
     <form onSubmit={handleAddTodo} >
-      <InputWithLabel todoTitle={todoTitle} handleTitleChange={handleTitleChange} label="Title" />
+      <InputWithLabel todoTitle={todoTitle} handleTitleChange={handleTitleChange} >
+        Title
+      </InputWithLabel>
       <button type="submit">Add</button>
     </form>
   )
