@@ -24,6 +24,12 @@ const App = function() {
     setTodoList([...todoList, newTodo])
   )
 
+  const removeTodo = function(id) {
+    const newTodoList = todoList.filter((todo) => id !== todo.id)
+
+    return setTodoList(newTodoList)
+  }
+
   return (
     <>
       <h1>Todo List</h1>
@@ -31,7 +37,7 @@ const App = function() {
       <AddTodoForm onAddTodo={addTodo} />
       <hr />
 
-      <TodoList todoList={todoList} />
+      <TodoList todoList={todoList} onRemoveTodo={removeTodo} />
     </>
   )
 }
